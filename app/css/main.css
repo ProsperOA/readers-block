@@ -112,7 +112,7 @@ li.list-group-item.active:hover {
   color: #d0e1e1;
 }
 
-div#main-banner h2 {
+div#main-banner h2  {
   color: #d0e1e1;
   font-size: 4em;
   padding: 20px;
@@ -124,6 +124,8 @@ div#main-banner h2 {
   -2px 2px 0 #1e2f2f,
   2px 2px 0 #1e2f2f;
 }
+
+
 #icon-banner {
   margin: 0;
   padding: 100px 30px;
@@ -137,7 +139,7 @@ div#icon-banner p {
 
 div#main-banner.jumbotron {
   margin: 0;
-  height: 600px;
+  height: 500px;
   background: url('../img/library.jpg ');
   background-attachment: fixed;
   background-origin: initial;
