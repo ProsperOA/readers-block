@@ -23,9 +23,9 @@ angular.module('readers-block')
         }
       });
     };
-
-    $scope.addBookToBlock = function(book) {
-
-    }
+    // 
+    // $scope.addBookToBlock = function(book) {
+    //
+    // }
 
 });
