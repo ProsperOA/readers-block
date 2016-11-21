@@ -73,7 +73,7 @@ angular.module('readers-block')
                 'description' : "My First List",
                 'tags' : "My First List",
                 'title' : "My First List",
-                'ratings' : {
+                'rating' : {
                   'community_rating': 0,
                   'user_rating': 0
                 }
