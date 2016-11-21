@@ -63,13 +63,13 @@ angular.module('readers-block')
               'subscribed': false,
               'blocks' : [{
                 'books' : [
-                  {
-                    "title": "Articial Intelligence - A History",
-                    "genres": ["computer science", "ariticial intelligence"],
-                    "author": "Dr. Albert Cruz",
-                    "cover_url": "http://someurl.com/imagecover-a1232.jpg"
-                  }
-                ],
+                    {
+                      "description" : "J.R.R. Tolkien",
+                      "thumbnail_image":"https://images.gr-assets.com/books/1372847500s/5907.jpg",
+                      "tags" : "fantasy",
+                      "title" : "The Hobbit"
+                    }
+                  ],
                 'description' : "My First List",
                 'tags' : "My First List",
                 'title' : "My First List",
@@ -80,6 +80,8 @@ angular.module('readers-block')
               }]
               }).then(
                 function() {
+                  location.path("#/");
+                  location.reload();
                 deferred.resolve('successful');
               }.bind(this)).catch(function(error) {
                 deferred.reject('error');
