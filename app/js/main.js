@@ -274,4 +274,45 @@ angular.module('readers-block')
       }
     );
 
+  $scope.emailSubscription = function() {
+    if($scope.user.subscribed) {
+      emailUnsubscribe();
+      return;
+    }
+
+    Patchwork.callPlatformMethod({
+        platformId: MAILCHIMP_PLATFORM_ID,
+        method: "subscribers",
+        action: "POST",
+        params: {email_address: $scope.user.email}
+    }).then(function(responseJSON) {
+      return new Promise(function(resolve, reject) {
+        alert("Subscribed Successfully. Please check your email for confirmation.");
+        console.log('calling add-subscriber for ' + $scope.user.email);
+        loginFactory.subscribe(true);
+        $scope.user.subscribed = true;
+        $scope.$apply();
+        resolve();
+      });
+    });
+  }
+
+  function emailUnsubscribe() {
+    Patchwork.callPlatformMethod({
+        platformId: MAILCHIMP_PLATFORM_ID,
+        method: "subscribers",
+        action: "DELETE",
+        params: {email_address: $scope.user.email}
+    }).then(function(responseJSON) {
+      return new Promise(function(resolve, reject) {
+        alert("Unsubscribed Successfully. Please check your email for confirmation.");
+        console.log('calling delete-subscriber for ' + $scope.user.email);
+        loginFactory.subscribe(false);
+        $scope.user.subscribed = false;
+        $scope.$apply();
+        resolve();
+      });
+    });
+  }
+
 });

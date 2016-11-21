@@ -11,7 +11,7 @@ angular.module('readers-block')
     console.log(blockId);
     return "Hello World";
   };
-
+  
   // call this to notify observers
   var notifyObservers = function(){
     angular.forEach(observerCallbacks, function(callback){
