@@ -62,16 +62,17 @@ angular.module('readers-block')
               'alias': u.email,
               'subscribed': false,
               'blocks' : [{
-                'books' : [],
-<<<<<<< HEAD
-                'description' : "zzzzzz",
-                'tags' : "zzzzzzzz",
-                'title' : "zzzzzzz",
-=======
+                'books' : [
+                  {
+                    "title": "Articial Intelligence - A History",
+                    "genres": ["computer science", "ariticial intelligence"],
+                    "author": "Dr. Albert Cruz",
+                    "cover_url": "http://someurl.com/imagecover-a1232.jpg"
+                  }
+                ],
                 'description' : "My First List",
                 'tags' : "My First List",
                 'title' : "My First List",
->>>>>>> 0a27c16469107399d1250b61bb9a63c62ea3dd77
                 'ratings' : {
                   'community_rating': 0,
                   'user_rating': 0
